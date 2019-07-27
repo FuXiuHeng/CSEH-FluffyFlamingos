@@ -1,15 +1,6 @@
 import React from 'react';
-import {
-	withStyles,
-	WithStyles
-} from '@material-ui/core/styles';
-import {
-	Button,
-	LinearProgress,
-	Typography, 
-	Tabs, 
-	Tab 
-} from '@material-ui/core';
+import { withStyles, WithStyles } from '@material-ui/core/styles';
+import { Button, LinearProgress, Typography, Tabs, Tab } from '@material-ui/core';
 
 import { styles } from './styles1';
 import { OverviewStudentPage } from './OverviewStudentPage';
@@ -25,7 +16,7 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 	constructor(props) {
 		super(props);
 		this.state = {
-			value: 1,	
+			value: 0,
 		};
 	}
 
@@ -56,11 +47,13 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 						</div>
 					</div>
 					<div className={classes.sponsorCard}>
-						<Typography variant='body1'>$1000 raised out of:</Typography>
-						<Typography variant='h4'>$5000</Typography>
-						<LinearProgress className={classes.bar} variant='determinate' value={50} />
-						<Button variant='contained' color='secondary'>Sponsor Now</Button>
-					</div> 
+						<Typography variant="body1">$1000 raised out of:</Typography>
+						<Typography variant="h4">$5000</Typography>
+						<LinearProgress className={classes.bar} variant="determinate" value={50} />
+						<Button variant="contained" color="secondary">
+							Sponsor Now
+						</Button>
+					</div>
 				</div>
 				<Tabs value={value} onChange={this.handleChange}>
 					<Tab label="Overview"></Tab>
@@ -75,9 +68,7 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 							<PostStudentPage />
 						</div>
 					</div>
-					<div className={classes.eventPanel}>
-						123
-					</div>
+					<div className={classes.eventPanel}>123</div>
 				</div>
 			</div>
 		);
