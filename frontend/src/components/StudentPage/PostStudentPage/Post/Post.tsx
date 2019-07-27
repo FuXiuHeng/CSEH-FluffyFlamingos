@@ -19,6 +19,10 @@ class PurePost extends React.Component<PostProps, PostState> {
 				<div className={classes.imageContainer}>
 					<img className={classes.image} src={introReact} alt=""/>
 				</div>
+				<div className={classes.likeComment}>
+					<p className={classes.like}>Like</p>
+					<p className={classes.comment}>Comment</p>
+				</div>
 			</div>
 		);
 	}

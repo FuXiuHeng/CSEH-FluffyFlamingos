@@ -7,7 +7,8 @@ export const styles = theme =>
 		},
 		topCard: {
 			display: 'flex',
-			justifyContent: 'space-between'
+			justifyContent: 'space-between',
+			marginBottom: 10
 		},
 		studentCard: {
 			display: 'flex',
@@ -24,7 +25,7 @@ export const styles = theme =>
 			borderStyle: 'solid',
 			borderColor: 'white',
 			borderWidth: 5,
-			boxShadow: '0px 0px 5px -1px #888',
+			boxShadow: '0px 0px 5px -2px #888',
 			minWidth: 200,
 			maxWidth: 200,
 			height: '200px',
@@ -62,6 +63,5 @@ export const styles = theme =>
 		tabPanel: {
 		},
 		eventPanel: {
-			backgroundColor: 'blue'
 		}
 	});

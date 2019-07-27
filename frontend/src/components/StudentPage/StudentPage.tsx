@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 
 import { styles } from './styles1';
+import { EventPanel } from './EventPanel';
 import { OverviewStudentPage } from './OverviewStudentPage';
 import { PostStudentPage } from './PostStudentPage';
 import student from './student.jpg';
@@ -76,7 +77,7 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 						</div>
 					</div>
 					<div className={classes.eventPanel}>
-						123
+						<EventPanel />
 					</div>
 				</div>
 			</div>
