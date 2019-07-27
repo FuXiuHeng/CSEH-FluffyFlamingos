@@ -22,8 +22,9 @@ export const styles = theme =>
 		photoContainer: {
 			borderRadius: '50%',
 			borderStyle: 'solid',
-			borderColor: theme.palette.primary.main,
+			borderColor: 'white',
 			borderWidth: 5,
+			boxShadow: '0px 0px 5px -1px #888',
 			minWidth: 200,
 			maxWidth: 200,
 			height: '200px',
@@ -39,7 +40,7 @@ export const styles = theme =>
 			width: '100%',
 			padding: '30px',
 			position: 'relative',
-			top: 50
+			top: 80
 		},
 		studentDetails: {
 			paddingTop: '30px',
