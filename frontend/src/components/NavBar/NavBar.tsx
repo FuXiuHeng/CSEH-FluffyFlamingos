@@ -1,20 +1,20 @@
 import React from 'react';
-import { AppBar, IconButton, Typography, ToolBar } from '@material-ui/core';
+import { AppBar, IconButton, Typography, Toolbar } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
-// import { createStyles, fade, makeStyles } from '@material-ui/core/styles';
+import { withStyles, WithStyles } from '@material-ui/styles';
 
-import './NavBar.css';
+import { styles } from './styles';
 import { SearchBar } from '../SearchBar';
 
-export interface Props {}
+export interface Props extends WithStyles<typeof styles> {}
 export interface State {}
 
-class NavBar extends React.Component<Props, State> {
+class PureNavBar extends React.Component<Props, State> {
 	state: State = {};
 
 	render() {
 		const { state, props } = this;
-
+		const { classes } = props;
 		return (
 			<div className={classes.root}>
 				<AppBar position="static">
@@ -38,4 +38,4 @@ class NavBar extends React.Component<Props, State> {
 	}
 }
 
-export default NavBar;
+export const NavBar = withStyles(styles)(PureNavBar);
