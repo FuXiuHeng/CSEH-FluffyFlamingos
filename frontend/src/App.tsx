@@ -24,7 +24,7 @@ const App: React.FC = () => {
 			<MuiThemeProvider theme={theme}>
 				<NavBar />
 				<Router history={history}>
-					<Route exact path="/" component={SponsorPage} />
+					<Route exact path="/" component={StudentPage} />
 					<Route path="/homePage" component={undefined} />
 					<Route path="/sponsorPage" component={SponsorPage} />
 					<Route path="/studentHomePage" component={StudentHomePage} />
