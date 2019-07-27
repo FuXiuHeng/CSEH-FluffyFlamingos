@@ -8,17 +8,16 @@ export const styles = theme =>
 		topCard: {
 			display: 'flex',
 			justifyContent: 'space-between',
-			marginBottom: 10
+			marginBottom: 10,
 		},
 		studentCard: {
 			display: 'flex',
 			flexDirection: 'row',
 		},
 		studentPhoto: {
-			display: 'inline',
-			height: '250px',
-			width: '350px',
-			marginLeft: '-40%',
+			height: 200,
+			width: 200,
+			// marginLeft: '-40%',
 		},
 		photoContainer: {
 			borderRadius: '50%',
@@ -33,15 +32,15 @@ export const styles = theme =>
 			position: 'relative',
 		},
 		studentNameContainer: {
-			height: '100%',	
-			display: 'flex'
+			height: '100%',
+			display: 'flex',
 		},
 		studentName: {
-			height: '100%',	
+			height: '100%',
 			width: '100%',
 			padding: '30px',
 			position: 'relative',
-			top: 80
+			top: 80,
 		},
 		studentDetails: {
 			paddingTop: '30px',
@@ -50,18 +49,17 @@ export const styles = theme =>
 			position: 'relative',
 			top: 50,
 			display: 'flex',
-			flexDirection: 'column'
+			flexDirection: 'column',
 		},
 		bar: {
-			margin: '10px 0px 10px 0px'
+			margin: '10px 0px 10px 0px',
 		},
 		bodyPanel: {
 			display: 'grid',
 			gridTemplateColumns: '1fr 300px',
 		},
-		tabPanel: {
-		},
+		tabPanel: {},
 		eventPanel: {
-			marginTop: 10
-		}
+			marginTop: 10,
+		},
 	});

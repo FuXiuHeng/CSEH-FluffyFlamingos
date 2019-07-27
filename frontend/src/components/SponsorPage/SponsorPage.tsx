@@ -17,8 +17,8 @@ interface SponsorPageState {
 
 class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 	state: SponsorPageState = {
-		achievedAmount: 400,
-		targetAmount: 1200,
+		achievedAmount: 4000,
+		targetAmount: 8000,
 		progress: 0,
 		amount: '',
 	};
