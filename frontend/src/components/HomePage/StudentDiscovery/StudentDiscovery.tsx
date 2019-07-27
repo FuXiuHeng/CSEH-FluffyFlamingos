@@ -10,7 +10,7 @@ class StudentDiscovery extends React.Component<Props, State> {
 	render() {
 		const { state, props } = this;
 		return (
-			<div>
+			<div className="StudentDiscovery">
 				<img src="https://i.pravatar.cc/150?img=" className="ImgStyles" />
 				<text className="Content">"hsdhdshjsdjhsdhjsdhs"</text>
 			</div>
