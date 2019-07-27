@@ -13,8 +13,8 @@ class HomePage extends React.Component<Props, State> {
 	state: State = {};
 
 	private readonly handleSponsorClick = () => {
-		history.push('/studentPage')
-	}
+		history.push('/studentPage');
+	};
 
 	render() {
 		const { state, props } = this;
@@ -27,8 +27,14 @@ class HomePage extends React.Component<Props, State> {
 							Help shape the future by donating towards youth education.
 						</text>
 						<div className="ButStyles">
-							<Button variant="contained" color="secondary" onClick={this.handleSponsorClick}>
-								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Sponsor Now</text>
+							<Button
+								variant="contained"
+								color="secondary"
+								onClick={this.handleSponsorClick}
+							>
+								<text style={{ fontSize: 22, fontWeight: 'bold' }}>
+									Sponsor Now
+								</text>
 							</Button>
 						</div>
 					</div>
@@ -60,15 +66,15 @@ class HomePage extends React.Component<Props, State> {
 						</div>
 					</div>
 				</div>
-				<hr className="Divider"/>
+				<hr className="Divider" />
 				<div className="StudentsPanel">
-					<Typography variant='h6' className="TitleWord">
+					<Typography variant="h6" className="TitleWord">
 						<b>Sponsor a Student:</b>
 					</Typography>
 					<div className="Students">
-						<Students />
-						<Students />
-						<Students />
+						<Students studentId={1} />
+						<Students studentId={2} />
+						<Students studentId={3} />
 					</div>
 				</div>
 			</div>
