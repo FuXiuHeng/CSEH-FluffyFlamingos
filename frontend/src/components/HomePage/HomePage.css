@@ -13,7 +13,7 @@
 	flex: 1;
 	background-image: url('../resources/homepageBackground75.jpg');
 	background-size: cover;
-	background-position: center; 
+	background-position: center;
 }
 
 .Events {
@@ -128,4 +128,19 @@
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	flex: 1;
+}
+
+.Message {
+	/* margin: 40px; */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	/* justify-content: flex-end; */
+	/* align-items: flex-end; */
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.IconStyle {
+	margin-right: 10px;
 }

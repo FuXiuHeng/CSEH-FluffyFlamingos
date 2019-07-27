@@ -5,6 +5,7 @@ import { Button, Typography } from '@material-ui/core';
 import { Students } from './Students';
 import { EventItem } from './EventItemHome';
 import history from '.././../history';
+import { QuestionAnswer } from '@material-ui/icons';
 
 interface Props {}
 interface State {}
@@ -13,8 +14,8 @@ class HomePage extends React.Component<Props, State> {
 	state: State = {};
 
 	private readonly handleSponsorClick = () => {
-		history.push('/studentPage')
-	}
+		history.push('/studentPage');
+	};
 
 	render() {
 		const { state, props } = this;
@@ -27,8 +28,14 @@ class HomePage extends React.Component<Props, State> {
 							Help shape the future by donating towards youth education.
 						</text>
 						<div className="ButStyles">
-							<Button variant="contained" color="secondary" onClick={this.handleSponsorClick}>
-								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Sponsor Now</text>
+							<Button
+								variant="contained"
+								color="secondary"
+								onClick={this.handleSponsorClick}
+							>
+								<text style={{ fontSize: 22, fontWeight: 'bold' }}>
+									Sponsor Now
+								</text>
 							</Button>
 						</div>
 					</div>
@@ -60,9 +67,9 @@ class HomePage extends React.Component<Props, State> {
 						</div>
 					</div>
 				</div>
-				<hr className="Divider"/>
+				<hr className="Divider" />
 				<div className="StudentsPanel">
-					<Typography variant='h6' className="TitleWord">
+					<Typography variant="h6" className="TitleWord">
 						<b>Sponsor a Student:</b>
 					</Typography>
 					<div className="Students">
@@ -70,6 +77,14 @@ class HomePage extends React.Component<Props, State> {
 						<Students />
 						<Students />
 					</div>
+				</div>
+
+				<div className="Message">
+					<Button variant="contained" color="primary">
+						<QuestionAnswer className="IconStyle" fontSize="default" />
+
+						<text style={{ fontSize: 22, fontWeight: 'bold' }}>Alina Young</text>
+					</Button>
 				</div>
 			</div>
 		);
