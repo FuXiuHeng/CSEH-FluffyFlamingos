@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, IconButton, Typography, Toolbar, Button, Tab } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
 import { withStyles, WithStyles } from '@material-ui/styles';
-import Image from '../resources/logo.jpg';
+import Image from '../resources/logo.png';
 import { styles } from './styles';
 import { SearchBar } from '../SearchBar';
 
