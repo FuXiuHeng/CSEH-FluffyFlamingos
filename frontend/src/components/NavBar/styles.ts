@@ -8,9 +8,12 @@ export const styles = theme =>
 		menuButton: {
 			marginRight: theme.spacing(2),
 		},
-		title: {
+		divider: {
 			flexGrow: 1,
-			display: 'none',
+		},
+		title: {
+			fontSize: 12,
+			color: 'white',
 			[theme.breakpoints.up('sm')]: {
 				display: 'block',
 			},
@@ -19,10 +22,11 @@ export const styles = theme =>
 			alignItems: 'flex-end',
 		},
 		imgStyle: {
-			width: 50,
-			height: 50,
+			width: 30,
+			height: 30,
 			borderRadius: 30,
-			// filter: 'invert(0.7)',
+			filter: 'invert(1)',
 			background: 'transparent',
+			marginRight: 10
 		},
 	});
