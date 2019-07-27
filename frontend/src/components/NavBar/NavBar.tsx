@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Typography, Toolbar, Button, Tab } from '@material-ui/core';
-import { Menu } from '@material-ui/icons';
+import { AccountCircle } from '@material-ui/icons';
 import { withStyles, WithStyles } from '@material-ui/styles';
 import Image from '../resources/logo.png';
 import { styles } from './styles';
@@ -27,9 +27,15 @@ class PureNavBar extends React.Component<NavBarProps, NavBarState> {
 						</Button>
 						<div className={classes.divider} />
 						<SearchBar />
+
+						<Button size="small" className={classes.profile} onClick={this.onHomeClick}>
+							<Typography className={classes.profileTitle} variant='subtitle1' noWrap>Alex</Typography>
+							<AccountCircle fontSize='large' />
+						</Button>
+{/* 
 						<Typography className={classes.profile} variant="h6" noWrap>
 							<Tab href="/studentPage" label="Profile" />
-						</Typography>
+						</Typography> */}
 					</Toolbar>
 				</AppBar>
 			</div>

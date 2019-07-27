@@ -19,7 +19,15 @@ export const styles = theme =>
 			},
 		},
 		profile: {
-			alignItems: 'flex-end',
+			color: 'white',
+			display: 'flex',
+			alignItems: 'center',
+			marginLeft: 10,
+		},
+		profileTitle: {
+			fontSize: 12,
+			color: 'white',
+			marginRight: 5,
 		},
 		imgStyle: {
 			width: 30,
