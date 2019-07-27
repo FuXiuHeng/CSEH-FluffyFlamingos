@@ -3,6 +3,11 @@ import { createStyles } from '@material-ui/core/styles';
 export const styles = theme =>
 	createStyles({
 		root: {
-			padding: '20px',
+			marginTop: 20,
 		},
+		image: {
+			width: '100%',
+			height: 180,
+			marginBottom: 5,
+		}
 	});
