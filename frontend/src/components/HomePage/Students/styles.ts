@@ -14,6 +14,7 @@ export const styles = (theme: Theme) =>
 			borderStyle: 'solid',
 			borderWidth: '2px',
 			borderColor: theme.palette.primary.light,
+			cursor: 'pointer'
 		},
 		Content: {
 			margin: '12px',

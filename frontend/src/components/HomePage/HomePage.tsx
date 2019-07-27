@@ -4,12 +4,18 @@ import StudentDiscovery from './StudentDiscovery';
 import { Button, Typography } from '@material-ui/core';
 import { Students } from './Students';
 import { EventItem } from './EventItemHome';
+import history from '.././../history';
 
 interface Props {}
 interface State {}
 
 class HomePage extends React.Component<Props, State> {
 	state: State = {};
+
+	private readonly handleSponsorClick = () => {
+		history.push('/studentPage')
+	}
+
 	render() {
 		const { state, props } = this;
 		return (
@@ -21,8 +27,8 @@ class HomePage extends React.Component<Props, State> {
 							Help shape the future by donating towards youth education.
 						</text>
 						<div className="ButStyles">
-							<Button variant="contained" color="secondary">
-								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Donate Now</text>
+							<Button variant="contained" color="secondary" onClick={this.handleSponsorClick}>
+								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Sponsor Now</text>
 							</Button>
 						</div>
 					</div>

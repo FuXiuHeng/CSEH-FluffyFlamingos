@@ -4,6 +4,7 @@ import { WithStyles } from '@material-ui/styles';
 import { styles } from './styles';
 import { withStyles } from '@material-ui/core';
 import { AccountCircle, LocationOn, School, AttachMoney, Cake } from '@material-ui/icons';
+import history from '../../../history';
 
 interface Props extends WithStyles<typeof styles> {}
 export interface State {}
@@ -11,11 +12,15 @@ export interface State {}
 class PureStudents extends React.Component<Props, State> {
 	state: State = {};
 
+	private readonly handleOnClick = () => {
+		history.push('/studentPage')
+	}
+
 	render() {
 		const { state, props } = this;
 		const { classes } = props;
 		return (
-			<div className={classes.students}>
+			<div className={classes.students} onClick={this.handleOnClick}>
 				<img src="https://i.pravatar.cc/150?img=" className={classes.ImgStyles} />
 				<div className={classes.profileLayout}>
 					<div className={classes.profile}>

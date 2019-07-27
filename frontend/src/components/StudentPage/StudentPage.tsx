@@ -6,6 +6,7 @@ import { styles } from './styles1';
 import { EventPanel } from './EventPanel';
 import { OverviewStudentPage } from './OverviewStudentPage';
 import { PostStudentPage } from './PostStudentPage';
+import history from '../../history';
 import student from './student.jpg';
 
 export interface StudentPageProps extends WithStyles<typeof styles> {}
@@ -21,12 +22,16 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 		};
 	}
 
-	handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+	private readonly handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
 		console.log(newValue);
 		this.setState({
 			value: newValue,
 		});
 	};
+
+	private readonly handleSponsorClick = () => {
+		history.push('/sponsorPage');
+	}
 
 	render() {
 		const { classes } = this.props;
@@ -51,7 +56,7 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 						<Typography variant="body1">$4000 raised out of:</Typography>
 						<Typography variant="h4">$5000</Typography>
 						<LinearProgress className={classes.bar} variant="determinate" value={80} />
-						<Button variant="contained" color="secondary">
+						<Button variant="contained" color="secondary" onClick={this.handleSponsorClick}>
 							Sponsor Now
 						</Button>
 					</div>
