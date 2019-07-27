@@ -1,8 +1,10 @@
 import React from 'react';
-import './SponsorPage.css';
+import { WithStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import { styles } from '../SearchBar/styles';
 
-export interface SponsorPageProps {}
-export interface SponsorPageState {}
+interface SponsorPageProps extends WithStyles<typeof styles> {}
+interface SponsorPageState {}
 
 class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 	state: SponsorPageState = {};
@@ -13,4 +15,4 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 	}
 }
 
-export default SponsorPage;
+export default withStyles(styles)(SponsorPage);
