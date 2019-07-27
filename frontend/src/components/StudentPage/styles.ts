@@ -3,10 +3,10 @@ import { createStyles } from '@material-ui/core/styles';
 export const styles = theme =>
 	createStyles({
 		root: {
-			padding: '20px',
+			padding: '100px',
 		},
 		studentCard: {
-			height: '250px',
+			height: '350px',
 			display: 'flex',
 			flexDirection: 'row',
 		},
@@ -14,12 +14,12 @@ export const styles = theme =>
 			display: 'inline',
 			height: '100%',
 			width: 'auto',
-			marginLeft: '-31%',
+			marginLeft: '-32%',
 		},
 		photoContainer: {
 			borderRadius: '50%',
-			width: '250px',
-			height: '250px',
+			width: '350px',
+			height: '350px',
 			overflow: 'hidden',
 			position: 'relative',
 		},
@@ -29,5 +29,8 @@ export const styles = theme =>
 		},
 		studentName: {
 			padding: '50px',
+		},
+		studentDetails: {
+			paddingTop: '30px',
 		},
 	});
