@@ -18,7 +18,6 @@ class StudentDiscovery extends React.Component<Props, State> {
 					<>
 						<div
 							style={{
-								flex: 3,
 								marginLeft: 80,
 								marginRight: 80,
 							}}
@@ -39,7 +38,6 @@ class StudentDiscovery extends React.Component<Props, State> {
 						<img src="https://i.pravatar.cc/150?img=5" className="ImgStyles" />
 						<div
 							style={{
-								flex: 3,
 								marginLeft: 80,
 								marginRight: 80,
 							}}

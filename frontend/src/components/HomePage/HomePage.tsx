@@ -36,16 +36,8 @@ class HomePage extends React.Component<Props, State> {
 				<div className="Sections">
 					<div className="Home">
 						<div className="Discovery">
-							<p className="TitleWord">Discovery</p>
 							<StudentDiscovery />
 							<StudentDiscovery inverted />
-						</div>
-
-						<p className="TitleWord">Similiar Students:</p>
-						<div className="Students">
-							<Students />
-							<Students />
-							<Students />
 						</div>
 					</div>
 					<div className="Events">
@@ -66,6 +58,17 @@ class HomePage extends React.Component<Props, State> {
 								/>
 							</div>
 						</div>
+					</div>
+				</div>
+				<hr className="Divider"/>
+				<div className="StudentsPanel">
+					<Typography variant='h6' className="TitleWord">
+						<b>Sponsor a Student:</b>
+					</Typography>
+					<div className="Students">
+						<Students />
+						<Students />
+						<Students />
 					</div>
 				</div>
 			</div>

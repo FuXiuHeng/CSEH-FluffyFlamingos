@@ -7,27 +7,30 @@ export const styles = (theme: Theme) =>
 			flex: 1,
 			flexDirection: 'column',
 			alignItems: 'center',
-			borderRadius: '40px',
 			margin: '30px',
-			paddingTop: '50px',
-			paddingBottom: '50px',
-			borderStyle: 'solid',
-			borderWidth: '2px',
-			borderColor: theme.palette.primary.light,
+			// paddingTop: '20px',
+			// paddingBottom: '20px',
+			// borderStyle: 'solid',
+			// borderRadius: '40px',
+			// borderWidth: '2px',
+			// borderColor: theme.palette.primary.light,
+			// boxShadow: '0px 0px 5px -2px #888',
 			cursor: 'pointer'
 		},
 		Content: {
 			margin: '12px',
 			color: '#3f3f5a',
+			fontSize: 16,
 		},
 		ImgStyles: {
 			height: 200,
 			width: 200,
 			borderRadius: '500px',
 			marginBottom: '30px',
+			boxShadow: '0px 0px 5px -2px #888',
 			borderStyle: 'solid',
 			borderWidth: '4px',
-			borderColor: '#90d7ff',
+			borderColor: 'white',
 		},
 		icon: {
 			// margin: '5px',
@@ -44,4 +47,8 @@ export const styles = (theme: Theme) =>
 			flexDirection: 'column',
 			alignItems: 'flex-start',
 		},
+		button: {
+			alignSelf: 'center',
+			marginBottom: 10,
+		}
 	});
