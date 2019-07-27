@@ -1,7 +1,9 @@
 import React from 'react';
-import './{{name}}.css';
+import { WithStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import { styles } from '../{{name}}/styles';
 
-export interface Props {}
+interface Props extends WithStyles<typeof styles> {}
 {{#if functional}}
 const {{name}}: React.FC<Props> = props => {
 	return (
@@ -9,7 +11,7 @@ const {{name}}: React.FC<Props> = props => {
 	);
 };
 {{else}}
-export interface State {}
+interface State {}
 
 class {{name}} extends React.Component<Props, State> {
 	state: State = {};
@@ -22,5 +24,6 @@ class {{name}} extends React.Component<Props, State> {
 	}
 }
 
-export default {{name}};
+export default withStyles(styles)({{name}});
+
 {{/if}}
