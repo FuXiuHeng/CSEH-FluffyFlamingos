@@ -1,5 +1,4 @@
 import React from 'react';
-import { colors, dimensions, sizes } from 'constants';
 import './{{name}}.css';
 
 export interface Props {}
