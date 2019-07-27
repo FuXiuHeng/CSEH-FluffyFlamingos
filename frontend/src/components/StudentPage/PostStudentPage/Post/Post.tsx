@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles, WithStyles } from '@material-ui/core/styles';
 
+import introReact from './introReact.jpg';
 import { styles } from './styles';
 
 export interface PostProps extends WithStyles<typeof styles> {}
@@ -14,7 +15,10 @@ class PurePost extends React.Component<PostProps, PostState> {
 				<div className={classes.date}>
 					27 July 2019, 9:00 a.m.
 				</div>
-				<p>Successfully enrolled into UNSW!</p>
+				<p>I've started to learn some React in my own time!</p>
+				<div className={classes.imageContainer}>
+					<img className={classes.image} src={introReact} alt=""/>
+				</div>
 			</div>
 		);
 	}

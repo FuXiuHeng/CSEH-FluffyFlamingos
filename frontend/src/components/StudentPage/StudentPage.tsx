@@ -56,9 +56,9 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 						</div>
 					</div>
 					<div className={classes.sponsorCard}>
-						<Typography variant='body1'>$1000 raised out of:</Typography>
+						<Typography variant='body1'>$4000 raised out of:</Typography>
 						<Typography variant='h4'>$5000</Typography>
-						<LinearProgress className={classes.bar} variant='determinate' value={50} />
+						<LinearProgress className={classes.bar} variant='determinate' value={80} />
 						<Button variant='contained' color='secondary'>Sponsor Now</Button>
 					</div> 
 				</div>
