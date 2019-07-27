@@ -17,7 +17,7 @@ class PureStudentPage extends React.Component<StudentPageProps, StudentPageState
 	constructor(props) {
 		super(props);
 		this.state = {
-			value: 0,
+			value: 1,
 		};
 	}
 

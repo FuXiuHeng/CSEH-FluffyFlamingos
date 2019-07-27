@@ -4,6 +4,7 @@ import './App.css';
 import { Router, Route } from 'react-router';
 import history from './history';
 import SponsorPage from './components/SponsorPage';
+import HomePage from './components/HomePage';
 import { NavBar, StudentPage, SearchResult } from './components';
 
 const theme = createMuiTheme({
@@ -24,8 +25,8 @@ const App: React.FC = () => {
 			<MuiThemeProvider theme={theme}>
 				<NavBar />
 				<Router history={history}>
-					<Route exact path="/" component={SponsorPage} />
-					<Route path="/homePage" component={undefined} />
+					<Route exact path="/" component={HomePage} />
+					<Route path="/homePage" component={HomePage} />
 					<Route path="/sponsorPage" component={SponsorPage} />
 					<Route path="/studentPage" component={StudentPage} />
 					<Route path="/search" component={SearchResult} />

@@ -1,9 +1,12 @@
 import React from 'react';
 import './HomePage.css';
 import StudentDiscovery from './StudentDiscovery';
-import { Button } from '@material-ui/core';
-export interface Props {}
-export interface State {}
+import { Button, Typography } from '@material-ui/core';
+import { Students } from './Students';
+import { EventItem } from './EventItemHome';
+
+interface Props {}
+interface State {}
 
 class HomePage extends React.Component<Props, State> {
 	state: State = {};
@@ -13,21 +16,51 @@ class HomePage extends React.Component<Props, State> {
 			<div className="HomePage">
 				<div className="Header">
 					<div className="Mission">
-						<div className="Content">
-							<h1>Mission</h1>
-							<text>jsjdnlkfsdngvldf</text>
+						<h1 style={{ fontSize: 66, fontWeight: 'bold' }}>Make A Difference</h1>
+						<text style={{ fontSize: 36 }}>
+							Help shape the future by donating towards youth education.
+						</text>
+						<div className="ButStyles">
+							<Button variant="contained" color="secondary">
+								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Donate Now</text>
+							</Button>
 						</div>
-						<Button className="ButStyles">Sponser Now</Button>
 					</div>
 				</div>
 				<div className="Sections">
 					<div className="Home">
 						<div className="Discovery">
+							<p className="TitleWord">Discovery</p>
 							<StudentDiscovery />
+							<StudentDiscovery inverted />
 						</div>
-						<div className="Students">Students</div>
+
+						<p className="TitleWord">Similiar Students:</p>
+						<div className="Students">
+							<Students />
+							<Students />
+							<Students />
+						</div>
 					</div>
-					<div className="Events">Events</div>
+					<div className="Events">
+						<div className="EventTab">
+							<Typography variant="body1">
+								<b className="EventWord">Events</b>
+							</Typography>
+							<div className="EventBody">
+								<EventItem
+									label="Cultural Exchange Program"
+									date="7 August 2019"
+									variant="cultural"
+								/>
+								<EventItem
+									label="Seed of Kindness Workshop"
+									date="5 October 2019"
+									variant="kindness"
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

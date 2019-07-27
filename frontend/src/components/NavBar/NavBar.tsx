@@ -1,8 +1,8 @@
 import React from 'react';
-import { AppBar, IconButton, Typography, Toolbar } from '@material-ui/core';
+import { AppBar, IconButton, Typography, Toolbar, Button, Tab } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
 import { withStyles, WithStyles } from '@material-ui/styles';
-
+import Image from '../resources/logo.png';
 import { styles } from './styles';
 import { SearchBar } from '../SearchBar';
 
@@ -16,18 +16,14 @@ class PureNavBar extends React.Component<NavBarProps, NavBarState> {
 			<div className={classes.root}>
 				<AppBar position="static">
 					<Toolbar>
-						<IconButton
-							edge="start"
-							className={classes.menuButton}
-							color="inherit"
-							aria-label="open drawer"
-						>
-							<Menu />
-						</IconButton>
+						<img src={Image} className={classes.imgStyle} />
 						<Typography className={classes.title} variant="h6" noWrap>
-							GIVE
+							<Tab href="/homePage" label="Home" />
 						</Typography>
 						<SearchBar />
+						<Typography className={classes.profile} variant="h6" noWrap>
+							<Tab href="/studentPage" label="Profile" />
+						</Typography>
 					</Toolbar>
 				</AppBar>
 			</div>

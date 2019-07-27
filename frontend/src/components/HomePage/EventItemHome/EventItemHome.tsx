@@ -7,10 +7,9 @@ import seedOfKindness from './seedOfKindness.png';
 import { styles } from './styles';
 
 export interface EventItemProps extends WithStyles<typeof styles> {
-	label: string,
-	date: string,
-	variant: 'cultural' | 'kindness'
-
+	label: string;
+	date: string;
+	variant: 'cultural' | 'kindness';
 }
 export interface EventItemState {}
 
@@ -21,8 +20,12 @@ class PureEventItem extends React.Component<EventItemProps, EventItemState> {
 		return (
 			<div className={classes.root}>
 				<img className={classes.image} src={imgSrc} alt="" />
-				<Typography variant='body1'><b>{this.props.label}</b></Typography>
-				<Typography variant='body2'>{this.props.date}</Typography>
+				<Typography variant="body1" className={classes.eventDetails}>
+					<b>{this.props.label}</b>
+				</Typography>
+				<Typography variant="body2" className={classes.eventDetails}>
+					{this.props.date}
+				</Typography>
 			</div>
 		);
 	}
