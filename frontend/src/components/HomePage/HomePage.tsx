@@ -5,6 +5,7 @@ import { Button, Typography } from '@material-ui/core';
 import { Students } from './Students';
 import { EventItem } from './EventItemHome';
 import history from '.././../history';
+import { QuestionAnswer } from '@material-ui/icons';
 
 interface Props {}
 interface State {}
@@ -76,6 +77,14 @@ class HomePage extends React.Component<Props, State> {
 						<Students studentId={2} />
 						<Students studentId={3} />
 					</div>
+				</div>
+
+				<div className="Message">
+					<Button variant="contained" color="primary">
+						<QuestionAnswer className="IconStyle" fontSize="default" />
+
+						<text style={{ fontSize: 22, fontWeight: 'bold' }}>Alina Young</text>
+					</Button>
 				</div>
 			</div>
 		);
