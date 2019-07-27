@@ -3,8 +3,9 @@ import './HomePage.css';
 import StudentDiscovery from './StudentDiscovery';
 import { Button } from '@material-ui/core';
 import { Students } from './Students';
-export interface Props {}
-export interface State {}
+
+interface Props {}
+interface State {}
 
 class HomePage extends React.Component<Props, State> {
 	state: State = {};
@@ -14,20 +15,24 @@ class HomePage extends React.Component<Props, State> {
 			<div className="HomePage">
 				<div className="Header">
 					<div className="Mission">
-						<h1>Make A Different</h1>
-						<text>
-							You can contribute to the society by sponsoring students around the
-							world through education.
+						<h1 style={{ fontSize: 66, fontWeight: 'bold' }}>Make A Difference</h1>
+						<text style={{ fontSize: 36 }}>
+							Help shape the future by donating towards youth education.
 						</text>
+						<div className="ButStyles">
+							<Button variant="contained" color="secondary">
+								<text style={{ fontSize: 22, fontWeight: 'bold' }}>Donate Now</text>
+							</Button>
+						</div>
 					</div>
-					<Button className="ButStyles">Sponser Now</Button>
 				</div>
 				<div className="Sections">
 					<div className="Home">
 						<div className="Discovery">
 							<StudentDiscovery />
-							<StudentDiscovery />
+							<StudentDiscovery inverted />
 						</div>
+
 						<div className="Students">
 							<Students />
 							<Students />
