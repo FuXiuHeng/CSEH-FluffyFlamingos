@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import "./App.css";
 import { Router, Route } from "react-router";
@@ -10,15 +10,15 @@ import {
 } from "./components";
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#0f0326',
-    },
-    secondary: {
-      main: '#ea526f',
-    }
-  }
-})
+	palette: {
+		primary: {
+			main: '#0f0326',
+		},
+		secondary: {
+			main: '#ea526f',
+		},
+	},
+});
 
 const App: React.FC = () => {
   return (

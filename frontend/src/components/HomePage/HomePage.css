@@ -1,0 +1,102 @@
+.HomePage {
+	text-align: center;
+}
+
+.Header {
+	background-color: #282c34;
+	min-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 1;
+}
+
+.Discovery {
+	background-color: pink;
+	min-height: 100vh;
+	min-width: 150vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 1;
+}
+
+.Students {
+	background-color: powderblue;
+	min-height: 100vh;
+	min-width: 150vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 1;
+}
+
+.Events {
+	background-color: red;
+	min-height: 200vh;
+	max-width: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 1;
+}
+
+.Sections {
+	background-color: yellow;
+	/* min-height: 100vh; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 2;
+}
+
+.Home {
+	background-color: blue;
+	/* min-height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	flex: 3;
+}
+
+.ButStyles {
+	flex: 1;
+}
+
+.Mission {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	background-color: aqua;
+	min-width: 200vh;
+}
+
+.Intro {
+	display: flex;
+	/* flex-direction: row; */
+	flex: 4;
+	align-self: flex-start;
+}
+
+.Content {
+	flex: 3;
+	min-width: 160vh;
+}

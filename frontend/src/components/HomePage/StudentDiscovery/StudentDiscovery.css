@@ -1,0 +1,17 @@
+.StudentDiscovery {
+	flex: 1;
+}
+
+.ImgStyles {
+	height: 80;
+	width: 80;
+	border-radius: 100px;
+	flex: 1;
+	flex-direction: row;
+}
+
+.Content {
+	flex: 1;
+	flex-direction: row;
+	background-color: blue;
+}
