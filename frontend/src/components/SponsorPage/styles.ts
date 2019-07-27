@@ -1,6 +1,6 @@
 import { createStyles } from '@material-ui/core/styles';
 import SponsorPage from './SponsorPage';
-import { flexbox } from '@material-ui/system';
+import { flexbox, fontSize } from '@material-ui/system';
 import { relative } from 'path';
 import { CenterFocusStrong } from '@material-ui/icons';
 
@@ -11,13 +11,16 @@ export const styles = theme =>
 			flex: 1,
 			flexDirection: 'column',
 			backgroundImage: 'linear-gradient(to top, #dfe9f3 0%, white 100%)',
+			padding: '60px',
+			paddingLeft: '350px',
+			paddingRight: '350px',
+			paddingBottom: '300px',
 		},
 
 		sponsorTab: {
 			display: 'flex',
 			flex: 1,
 			flexDirection: 'column',
-			paddingLeft: '40px',
 		},
 		sponsorSub: {
 			display: 'flex',
@@ -29,40 +32,16 @@ export const styles = theme =>
 			display: 'flex',
 			flex: 1,
 			flexDirection: 'column',
-			minHeight: '50vh',
 		},
 		studentSub: {
 			display: 'flex',
 			flex: 1,
 			flexDirection: 'column',
 		},
-		paymentTab: {
-			display: 'flex',
-			flexDirection: 'column',
-			flex: 2,
-			minHeight: '50vh',
-		},
-		paymentSub: {
-			display: 'flex',
-			flexDirection: 'row',
-			flex: 1,
-		},
-		paymentBox: {
-			display: 'flex',
-			flexDirection: 'column',
-			flex: 1,
-		},
-		textBox: {
-			width: 75,
-			height: 20,
-			padding: '10px',
-		},
 		progressBar: {
-			position: 'relative',
-			height: 20,
-			width: 350,
-			borderRadius: '50px',
-			border: '1px solid #333',
+			margin: '5px',
+			padding: '5px',
+			alignItems: 'center',
 		},
 		filler: {
 			backgroundColor: '#1DA598',
@@ -71,13 +50,7 @@ export const styles = theme =>
 			borderRadius: 'inherit',
 			transition: 'width .2s ease-in',
 		},
-		progressTab: {
-			flexDirection: 'column',
-			flex: 1,
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center',
-		},
+
 		buttonStyle: {
 			color: 'blue',
 			backgroundColor: 'red',
@@ -94,7 +67,6 @@ export const styles = theme =>
 		},
 		stepButton: {
 			color: 'blue',
-			backgroundColor: 'red',
 			margin: '10px',
 			borderRadius: '1000px',
 			padding: '15px',
@@ -103,6 +75,9 @@ export const styles = theme =>
 			height: '200px',
 			width: '200px',
 			borderRadius: '500px',
+			borderStyle: 'solid',
+			borderWidth: '4px',
+			borderColor: '#90D7FF',
 		},
 		studentPart: {
 			display: 'flex',
