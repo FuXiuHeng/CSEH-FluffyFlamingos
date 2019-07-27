@@ -14,8 +14,11 @@ class HomePage extends React.Component<Props, State> {
 			<div className="HomePage">
 				<div className="Header">
 					<div className="Mission">
-						<h1>Mission</h1>
-						<text>jsjdnlkfsdngvldf</text>
+						<h1>Make A Different</h1>
+						<text>
+							You can contribute to the society by sponsoring students around the
+							world through education.
+						</text>
 					</div>
 					<Button className="ButStyles">Sponser Now</Button>
 				</div>

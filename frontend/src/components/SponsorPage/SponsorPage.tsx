@@ -1,14 +1,14 @@
 import React from 'react';
 import './SponsorPage.css';
 
-export interface Props {}
-export interface State {}
+export interface SponsorPageProps {}
+export interface SponsorPageState {}
 
-class SponsorPage extends React.Component<Props, State> {
-	state: State = {};
+class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
+	state: SponsorPageState = {};
 
 	render() {
-		const { state, props } = this;
+		// const { state, props } = this;
 		return <div>sponsor page</div>;
 	}
 }

@@ -4,16 +4,17 @@ import './App.css';
 import { Router, Route } from 'react-router';
 import history from './history';
 import SponsorPage from './components/SponsorPage';
-import { NavBar } from './components';
+import { NavBar, StudentHomePage, StudentPage } from './components';
 import HomePage from './components/HomePage';
 
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			main: '#0f0326',
+			main: '#23395b',
+			light: '#90D7FF',
 		},
 		secondary: {
-			main: '#ea526f',
+			main: '#ef6461',
 		},
 	},
 });
@@ -27,6 +28,8 @@ const App: React.FC = () => {
 					<Route exact path="/" component={HomePage} />
 					<Route path="/homePage" component={HomePage} />
 					<Route path="/sponsorPage" component={SponsorPage} />
+					<Route path="/studentHomePage" component={StudentHomePage} />
+					<Route path="/studentPage" component={StudentPage} />
 				</Router>
 			</MuiThemeProvider>
 		</div>
