@@ -58,10 +58,10 @@ export const styles = theme =>
 		bodyPanel: {
 			display: 'grid',
 			gridTemplateColumns: '1fr 300px',
-			marginTop: 10
 		},
 		tabPanel: {
 		},
 		eventPanel: {
+			marginTop: 10
 		}
 	});
