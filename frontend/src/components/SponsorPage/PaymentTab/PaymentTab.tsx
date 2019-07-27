@@ -1,5 +1,5 @@
 import React from 'react';
-import { WithStyles, Button } from '@material-ui/core';
+import { WithStyles, Button, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import { styles } from '../PaymentTab/styles';
 
@@ -18,47 +18,29 @@ class PaymentTab extends React.Component<Props, State> {
 		const { classes } = props;
 		return (
 			<div className={classes.paymentTab}>
-				<h1
-					style={{
-						fontSize: '3rem',
-						fontFamily: 'Montserrat',
-						fontWeight: 'bold',
-					}}
-				>
-					Payment:
-				</h1>
+				<Typography variant='h6'><b>Payment:</b></Typography>
 				<div className={classes.paymentBox}>
 					<input
-						style={{ margin: 5 }}
+						style={{ margin: 0 }}
 						type="number"
-						placeholder={'Amount'}
+						placeholder={'Enter amount'}
 						className={classes.textBox}
 						value={props.amount}
 						onChange={props.updateAmount}
 					/>
 					<Button
 						style={{
-							paddingRight: 60,
-							paddingLeft: 60,
-							margin: 10,
-							marginBottom: 15,
+							marginLeft: 10,
+							paddingRight: 20,
+							paddingLeft: 20,
 						}}
 						variant="contained"
 						color="primary"
 						onClick={() => props.onPress(1)}
 					>
-						<h1
-							style={{
-								fontSize: '1rem',
-								fontFamily: 'Montserrat',
-								fontWeight: 'bold',
-							}}
-						>
-							Pay
-						</h1>
+						Next
 					</Button>
 				</div>
-				<div className={classes.progressTab}></div>
 			</div>
 		);
 	}

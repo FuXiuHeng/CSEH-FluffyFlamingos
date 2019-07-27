@@ -5,20 +5,17 @@ export const styles = theme =>
 		paymentTab: {
 			display: 'flex',
 			flexDirection: 'column',
-			flex: 2,
-			minHeight: '50vh',
+			marginTop: 20,
 		},
 
 		paymentBox: {
 			flexDirection: 'row',
 		},
 		textBox: {
-			width: 75,
-			height: 20,
+			width: 150,
+			height: 10,
 			padding: '12px',
-			paddingRight: '50px',
-			paddingLeft: '50px',
-			fontSize: 22,
+			fontSize: 16,
 		},
 		progressTab: {
 			flexDirection: 'column',

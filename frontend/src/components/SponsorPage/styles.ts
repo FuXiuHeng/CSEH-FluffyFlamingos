@@ -10,13 +10,17 @@ export const styles = theme =>
 			display: 'flex',
 			flex: 1,
 			flexDirection: 'column',
-			backgroundImage: 'linear-gradient(to top, #dfe9f3 0%, white 100%)',
+			// backgroundImage: 'linear-gradient(to top, #dfe9f3 0%, white 100%)',
 			padding: '60px',
 			paddingLeft: '350px',
 			paddingRight: '350px',
 			paddingBottom: '300px',
 		},
-
+		tabContainer: {
+			padding: '20px',
+			boxShadow: '1px 1px 5px -2px #888',
+			margin: '30px 0px 0px 0px',
+		},
 		sponsorTab: {
 			display: 'flex',
 			flex: 1,
@@ -34,6 +38,7 @@ export const styles = theme =>
 			flexDirection: 'column',
 		},
 		studentSub: {
+			marginLeft: 10,
 			display: 'flex',
 			flex: 1,
 			flexDirection: 'column',
@@ -74,14 +79,17 @@ export const styles = theme =>
 		imgStyle: {
 			height: '200px',
 			width: '200px',
-			borderRadius: '500px',
+			borderRadius: '50%',
 			borderStyle: 'solid',
-			borderWidth: '4px',
-			borderColor: '#90D7FF',
+			borderColor: 'white',
+			borderWidth: 5,
+			boxShadow: '0px 0px 5px -2px #888',
 		},
 		studentPart: {
 			display: 'flex',
 			flexDirection: 'row',
 			flex: 1,
 		},
+		inlineText: {
+		}
 	});

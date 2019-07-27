@@ -1,10 +1,11 @@
 import React from 'react';
-import { WithStyles, Button, LinearProgress } from '@material-ui/core';
+import { WithStyles, Button, LinearProgress, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import { styles } from '../SponsorPage/styles';
 import PaymentTab from './PaymentTab';
 import SenderDetailsTab from './SenderDetailsTab';
 import ReceiptTab from './ReceiptTab';
+import history from '../../history';
 
 interface SponsorPageProps extends WithStyles<typeof styles> {}
 interface SponsorPageState {
@@ -36,6 +37,7 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 				});
 			} else if (number == 0) {
 				this.setState({ amount: '' });
+				history.push('/homePage');
 			}
 			this.setState({ progress: number });
 		};
@@ -46,45 +48,37 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 		return (
 			<div className={classes.sponsorPage}>
 				<div className={classes.sponsorTab}>
-					<h1 style={{ fontSize: '4rem', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
-						Who you are <span style={{ color: '#ef6461' }}>Sponsoring:</span>
-						<br />
-					</h1>
 					<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
 						<img className={classes.imgStyle} src="https://i.pravatar.cc/150?img=" />
 						<div style={{ flexDirection: 'column', marginLeft: 60 }}>
+
+							<Typography variant='h6' >
+								<span style={{ color: '#ef6461' }}><b>You are sponsoring:</b></span>
+							</Typography>
+							<Typography variant='h3'>
+								Jessica Alba
+							</Typography>
 							<LinearProgress
-								style={{ padding: 10, marginTop: 100, borderRadius: 30 }}
+								style={{ padding: 5, marginTop: 20, marginBottom: 10, borderRadius: 30 }}
 								variant="determinate"
 								color="primary"
 								value={percent}
 							/>
-							<h1
-								style={{
-									fontSize: '2.5rem',
-									fontFamily: 'Montserrat',
-									fontWeight: 'bold',
-								}}
-							>
-								{`$${state.achievedAmount} of $${state.targetAmount} `}
-								<span style={{ color: '#ef6461' }}>collected.</span>
-							</h1>
+							<Typography variant='h6'>
+								$
+								<span style={{ fontSize: 28 }}>{state.achievedAmount} </span>
+								 of $
+								<span style={{ fontSize: 28 }}>{state.targetAmount} </span>
+								collected.
+							</Typography>
 						</div>
 					</div>
 				</div>
 				{state.progress == 0 && (
-					<>
+					<div className={classes.tabContainer}>
 						<div className={classes.studentTab}>
 							<div>
-								<h1
-									style={{
-										fontSize: '3rem',
-										fontFamily: 'Montserrat',
-										fontWeight: 'bold',
-									}}
-								>
-									Student Details:
-								</h1>
+								<Typography variant='h6'><b>Student Details:</b></Typography>
 							</div>
 							<div className={classes.studentPart}>
 								<div className={classes.studentSub}>
@@ -102,14 +96,20 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 								onPress={onPress}
 							/>
 						)}
-					</>
+					</div>
 				)}
 
 				{state.progress == 1 && (
-					<SenderDetailsTab amount={state.amount} onPress={onPress} />
+					<div className={classes.tabContainer}>
+						<SenderDetailsTab amount={state.amount} onPress={onPress} />
+					</div>
 				)}
 
-				{state.progress == 2 && <ReceiptTab amount={state.amount} onPress={onPress} />}
+				{state.progress == 2 && (
+					<div className={classes.tabContainer}>
+						<ReceiptTab amount={state.amount} onPress={onPress} />
+					</div>
+				)}
 			</div>
 		);
 	}
@@ -118,8 +118,7 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 export default withStyles(styles)(SponsorPage);
 
 export const detailsFormatter = (title: String, detail: String) => (
-	<div style={{ flexDirection: 'row', margin: 8 }}>
-		<text style={{ fontSize: 24, fontWeight: 'bold', color: '#23395b' }}>{title}: </text>
-		<text style={{ fontSize: 24 }}>{detail}</text>
+	<div style={{ margin: '4px 0px' }}>
+		<Typography variant='body1'>{title}: {detail}</Typography>
 	</div>
 );
