@@ -6,15 +6,12 @@ import { withStyles, WithStyles } from '@material-ui/styles';
 import { styles } from './styles';
 import { SearchBar } from '../SearchBar';
 
-export interface Props extends WithStyles<typeof styles> {}
-export interface State {}
+export interface NavBarProps extends WithStyles<typeof styles> {}
+export interface NavBarState {}
 
-class PureNavBar extends React.Component<Props, State> {
-	state: State = {};
-
+class PureNavBar extends React.Component<NavBarProps, NavBarState> {
 	render() {
-		const { state, props } = this;
-		const { classes } = props;
+		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
 				<AppBar position="static">
@@ -28,7 +25,7 @@ class PureNavBar extends React.Component<Props, State> {
 							<Menu />
 						</IconButton>
 						<Typography className={classes.title} variant="h6" noWrap>
-							Material-UI
+							GIVE
 						</Typography>
 						<SearchBar />
 					</Toolbar>

@@ -1,0 +1,13 @@
+.StudentHomePage {
+    display: flex;
+}
+
+.mainPanel {
+    width: 100%;
+    background-color: red;
+}
+
+.sidePanel {
+    width: 500px;
+    background-color: blue;
+}

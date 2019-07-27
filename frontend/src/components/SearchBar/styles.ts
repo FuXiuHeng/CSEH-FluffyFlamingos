@@ -1,6 +1,6 @@
 import { createStyles, fade } from '@material-ui/core/styles';
 
-export const styles = createStyles(theme => ({
+export const styles = (theme) => createStyles ({
 	search: {
 		position: 'relative',
 		borderRadius: theme.shape.borderRadius,
@@ -38,4 +38,4 @@ export const styles = createStyles(theme => ({
 			},
 		},
 	},
-}));
+});

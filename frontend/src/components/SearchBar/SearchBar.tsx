@@ -5,15 +5,12 @@ import { withStyles, WithStyles } from '@material-ui/core/styles';
 
 import { styles } from './styles';
 
-export interface Props extends WithStyles<typeof styles> {}
-export interface State {}
+export interface SearchBarProps extends WithStyles<typeof styles> {}
+export interface SearchBarState {}
 
-class PureSearchBar extends React.Component<Props, State> {
-	state: State = {};
-
+class PureSearchBar extends React.Component<SearchBarProps, SearchBarState> {
 	render() {
-		const { state, props } = this;
-		const { classes } = props;
+		const { classes } = this.props;
 		return (
 			<div className={classes.search}>
 				<div className={classes.searchIcon}>
