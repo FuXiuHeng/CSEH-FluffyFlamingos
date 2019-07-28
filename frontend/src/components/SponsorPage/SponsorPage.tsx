@@ -6,6 +6,7 @@ import PaymentTab from './PaymentTab';
 import SenderDetailsTab from './SenderDetailsTab';
 import ReceiptTab from './ReceiptTab';
 import history from '../../history';
+import Image from '../resources/1Photo.jpg';
 
 interface SponsorPageProps extends WithStyles<typeof styles> {}
 interface SponsorPageState {
@@ -26,10 +27,10 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 	render() {
 		const { state, props } = this;
 		const { classes } = this.props;
+		const data = require('../HomePage/Students/studentsData/1Data.json');
 		const updateAmount = (event: React.ChangeEvent<HTMLInputElement>) => {
 			this.setState({ amount: event.target.value });
 		};
-
 		const onPress = (number: number) => {
 			if (number == 2) {
 				this.setState({
@@ -49,26 +50,28 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 			<div className={classes.sponsorPage}>
 				<div className={classes.sponsorTab}>
 					<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-						<img className={classes.imgStyle} src="https://i.pravatar.cc/150?img=" />
+						<img className={classes.imgStyle} src={Image} />
 						<div style={{ flexDirection: 'column', marginLeft: 60 }}>
-
-							<Typography variant='h6' >
-								<span style={{ color: '#ef6461' }}><b>You are sponsoring:</b></span>
+							<Typography variant="h6">
+								<span style={{ color: '#ef6461' }}>
+									<b>You are sponsoring:</b>
+								</span>
 							</Typography>
-							<Typography variant='h3'>
-								Jessica Alba
-							</Typography>
+							<Typography variant="h3">{data.name}</Typography>
 							<LinearProgress
-								style={{ padding: 5, marginTop: 20, marginBottom: 10, borderRadius: 30 }}
+								style={{
+									padding: 5,
+									marginTop: 20,
+									marginBottom: 10,
+									borderRadius: 30,
+								}}
 								variant="determinate"
 								color="primary"
 								value={percent}
 							/>
-							<Typography variant='h6'>
-								$
-								<span style={{ fontSize: 28 }}>{state.achievedAmount} </span>
-								 of $
-								<span style={{ fontSize: 28 }}>{state.targetAmount} </span>
+							<Typography variant="h6">
+								$<span style={{ fontSize: 28 }}>{state.achievedAmount} </span>
+								of $<span style={{ fontSize: 28 }}>{state.targetAmount} </span>
 								collected.
 							</Typography>
 						</div>
@@ -78,14 +81,18 @@ class SponsorPage extends React.Component<SponsorPageProps, SponsorPageState> {
 					<div className={classes.tabContainer}>
 						<div className={classes.studentTab}>
 							<div>
-								<Typography variant='h6'><b>Student Details:</b></Typography>
+								<Typography variant="h6">
+									<b>Student Details:</b>
+								</Typography>
 							</div>
 							<div className={classes.studentPart}>
 								<div className={classes.studentSub}>
-									{detailsFormatter('Name', 'Jessica Alba')}
-									{detailsFormatter('Age', '22')}
-									{detailsFormatter('Date of Birth', 'April 22')}
-									{detailsFormatter('Location', 'Sydney')}
+									{detailsFormatter('Age', data.age)}
+									{detailsFormatter('Location', data.location)}
+									{detailsFormatter('Favourite Subject', data.favSubject)}
+									{detailsFormatter('Aspirations', data.aspirations)}
+									{detailsFormatter('Hobby', data.hobby)}
+									{detailsFormatter('Target', data.purpose)}
 								</div>
 							</div>
 						</div>
@@ -119,6 +126,8 @@ export default withStyles(styles)(SponsorPage);
 
 export const detailsFormatter = (title: String, detail: String) => (
 	<div style={{ margin: '4px 0px' }}>
-		<Typography variant='body1'>{title}: {detail}</Typography>
+		<Typography variant="body1">
+			{title}: {detail}
+		</Typography>
 	</div>
 );
