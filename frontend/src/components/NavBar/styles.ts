@@ -37,4 +37,14 @@ export const styles = theme =>
 			background: 'transparent',
 			marginRight: 10
 		},
+		message: {
+			position: 'fixed',
+			right: 0,
+			bottom: 0,
+			marginRight: 20,
+			marginBottom: 10,
+		},
+		iconStyle :{
+			marginRight: 10,
+		},
 	});

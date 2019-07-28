@@ -19,21 +19,27 @@ const theme = createMuiTheme({
 	},
 });
 
-const App: React.FC = () => {
-	return (
-		<div>
-			<MuiThemeProvider theme={theme}>
-				<NavBar />
-				<Router history={history}>
-					<Route exact path="/" component={HomePage} />
-					<Route path="/homePage" component={HomePage} />
-					<Route path="/sponsorPage" component={SponsorPage} />
-					<Route path="/studentPage" component={StudentPage} />
-					<Route path="/search" component={SearchResult} />
-				</Router>
-			</MuiThemeProvider>
-		</div>
-	);
+interface AppProps {}
+interface AppState {}
+
+class App extends React.Component<AppProps, AppState> {
+
+	render() {
+		return (
+			<div>
+				<MuiThemeProvider theme={theme}>
+					<NavBar />
+					<Router history={history}>
+						<Route exact path="/" component={HomePage} />
+						<Route path="/homePage" component={HomePage} />
+						<Route path="/sponsorPage" component={SponsorPage} />
+						<Route path="/studentPage" component={StudentPage} />
+						<Route path="/search" component={SearchResult} />
+					</Router>
+				</MuiThemeProvider>
+			</div>
+		);
+	}
 };
 
 export default App;

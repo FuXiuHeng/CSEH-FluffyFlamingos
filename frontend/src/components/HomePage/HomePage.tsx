@@ -78,14 +78,6 @@ class HomePage extends React.Component<Props, State> {
 						<Students studentId={3} />
 					</div>
 				</div>
-
-				<div className="Message">
-					<Button variant="contained" color="primary">
-						<QuestionAnswer className="IconStyle" fontSize="default" />
-
-						<text style={{ fontSize: 22, fontWeight: 'bold' }}>Alina Young</text>
-					</Button>
-				</div>
 			</div>
 		);
 	}
